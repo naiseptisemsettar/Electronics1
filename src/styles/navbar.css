@@ -1,0 +1,110 @@
+/* تثبيت النافبار في الأعلى وجعله احترافياً */
+.main-nav-wrapper {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 45, 91, 0.08); /* ظل أزرق خفيف */
+  padding: 15px 0;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid #f0f4f8;
+}
+
+/* اللوجو */
+.logo-brand {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #002d5b !important; /* أزرق غامق */
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.logo-brand:hover {
+  color: #00bfff !important; /* أزرق فاتح عند الهوفر */
+}
+
+.logo-brand .dot {
+  color: #00bfff;
+}
+
+/* روابط التنقل */
+.nav-links-list {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links-list a {
+  color: #002d5b !important; /* أزرق غامق */
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* تأثير الخط تحت الروابط */
+.nav-links-list a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #00bfff;
+  transition: 0.3s;
+}
+
+.nav-links-list a:hover {
+  color: #00bfff !important; /* أزرق فاتح */
+}
+
+.nav-links-list a:hover::after {
+  width: 100%;
+}
+
+/* الأيقونات */
+.nav-icon-link {
+  color: #002d5b !important; /* أزرق غامق */
+  font-size: 1.4rem;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-icon-link:hover {
+  color: #00bfff !important; /* أزرق فاتح */
+  transform: translateY(-2px);
+}
+
+/* عداد السلة والمفضلة */
+.icon-badge-container {
+  position: relative;
+  display: inline-block;
+}
+
+.count-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #00bfff; /* خلفية العداد أزرق فاتح */
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+/* محاذاة محول اللغة */
+.lang-box-nav {
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 1px solid #eee;
+}
+
+/* لضمان عدم اختفاء المحتوى تحت النافبار الثابت */
+body {
+  padding-top: 75px;
+}

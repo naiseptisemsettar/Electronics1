@@ -1,0 +1,2519 @@
+
+:root {
+    --dark-blue-heading: #253D4E; /* أزرق داكن جداً وواضح */
+    --accent-orange: #FDC040;      /* لون البرتقالي المطلوب */
+    --accent-orange-hover: #f5b021; 
+    --text-body: #4f5d75;
+    --brand-green: #3BB77E;
+}
+
+.hero-card {
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px; /* حواف أنعم */
+    display: flex;
+    align-items: center;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* الكارد الكبير */
+.main-card {
+    min-height: 550px;
+    padding: 100px 80px; /* مساحة داخلية أكبر */
+}
+
+.main-title {
+    color: var(--dark-blue-heading);
+    font-weight: 900; /* خط عريض جداً */
+    font-size: 4rem;  /* حجم كبير */
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.main-desc {
+    color: var(--text-body);
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+/* الكاردات الصغيرة */
+.sub-card {
+    min-height: 265px;
+    padding: 45px;
+}
+
+.sub-title {
+    color: var(--dark-blue-heading);
+    font-weight: 1000;
+    font-size: 2rem;
+    margin: 15px 0;
+}
+.sub-desc{
+    font-size: 20px;
+     color: var(--text-body);
+}
+/* أزرار البرتقالية (الباك كراوند) */
+.btn-orange-main {
+    background-color: var(--accent-orange) !important;
+    color: var(--dark-blue-heading) !important; /* نص داكن فوق البرتقالي لزيادة الوضوح */
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.btn-orange-small {
+    background-color: var(--accent-orange) !important;
+    color: var(--dark-blue-heading) !important;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-orange-main:hover, .btn-orange-small:hover {
+    background-color: var(--dark-blue-heading) !important;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+.btn-link-custom {
+    color: var(--dark-blue-heading);
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 25px;
+    font-size: 18px;
+}
+
+/* نصوص الترويسة */
+.badge-text-top { color: var(--brand-green); font-weight: 800; font-size: 16px; text-transform: uppercase; }
+.sale-label { color: #f74b81; font-weight: 700; }
+.collection-label { color: var(--brand-green); font-weight: 700; }
+
+/* ضبط العربي */
+.rtl-style .btn-link-custom {
+    margin-left: 0;
+    margin-right: 25px;
+}
+
+@media (max-width: 991px) {
+    .main-title { font-size: 2.5rem; }
+    .main-card { padding: 40px; }
+}
+/* تعديلات خاصة للشاشات الصغيرة جداً (الموبايل) */
+@media (max-width: 576px) {
+    .main-card {
+        padding: 40px 20px; /* تقليل المسافات الداخلية */
+        min-height: 350px;   /* تقليل الارتفاع ليناسب الشاشة */
+    }
+
+    .main-title {
+        font-size: 1.8rem;   /* تصغير الخط ليناسب عرض الموبايل */
+        font-weight: 800;
+    }
+
+    .main-desc {
+        font-size: 16px;     /* تصغير وصف العرض */
+        margin-bottom: 20px;
+    }
+
+    .sub-card {
+        min-height: 220px;
+        padding: 25px;
+    }
+
+    .sub-title {
+        font-size: 1.4rem;
+    }
+
+    .btn-orange-main {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+}
+/* تأثيرات إضافية لجعل النصوص تبدو كماركات */
+.brand-item {
+    text-decoration: none;
+    color: #999; /* لون باهت جداً في البداية */
+    font-weight: 800;
+    transition: all 0.4s ease;
+    opacity: 0.4; 
+    filter: grayscale(100%); /* زيادة التأثير الباهت */
+}
+
+.brand-item:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    color: var(--dark-blue-heading);
+    transform: scale(1.1); /* تكبير بسيط عند اللمس */
+}
+
+/* تمييز كل ماركة بخط بسيط ليظهر كأنه شعار */
+.panasonic { font-family: sans-serif; letter-spacing: -1px; }
+.vaio { font-style: italic; font-family: serif; letter-spacing: 2px; }
+.acer { text-transform: lowercase; font-family: 'Arial'; }
+.nokia { letter-spacing: 3px; }
+.dell { border: 2px solid transparent; }
+.dell:hover { border-bottom: 2px solid var(--dark-blue-heading); }
+
+
+/* الألوان الداكنة للنصوص على اليسار */
+.section-title-dark {
+    color: #253D4E !important; /* أزرق داكن جداً */
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.section-desc-dark {
+    color: #253D4E !important; /* نفس درجة اللون الأزرق */
+    font-size: 16px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* تنسيق شبكة الماركات */
+.brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* المسافة بين المربعات */
+    justify-content: flex-start;
+}
+
+/* تصميم الإطار (البوكس) لكل براند */
+.brand-box {
+    text-decoration: none;
+    color: #b1b1b1; /* لون النص باهت داخل الإطار */
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px 25px;
+    border: 1px solid #e2e2e2; /* الإطار الرمادي الخفيف */
+    border-radius: 8px;
+    min-width: 120px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* تأثير عند تمرير الماوس على الإطار */
+.brand-box:hover {
+    color: #253D4E; /* الخط يغمق */
+    border-color: #253D4E; /* الإطار يغمق للأزرق */
+    background-color: #f9f9f9;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* تحسينات إضافية للكارد الكبير (للتأكد من لون العنوان) */
+.main-title {
+    color: #253D4E !important;
+}
+
+/* لضمان التنسيق في الموبايل */
+@media (max-width: 991px) {
+    .brands-grid {
+        justify-content: center;
+    }
+    .section-title-dark, .section-desc-dark {
+        text-align: center;
+    }
+}
+
+
+/* تنسيق قسم الـ 8 كاردات */
+.category-box-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.category-box-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    border-color: #BCE3C9;
+}
+
+/* الأيقونة الكبيرة للقسم */
+.category-icon-wrapper {
+    background-color: #f2fce4;
+    min-width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.category-icon-wrapper i {
+    font-size: 28px;
+    color: #3BB77E;
+}
+
+/* العنوان الرئيسي (أزرق داكن وعريض جداً) */
+.category-main-title {
+    color: #253D4E !important;
+    font-weight: 800 !important;
+    font-size: 1.15rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* قائمة الروابط */
+.category-links-list li {
+    margin-bottom: 10px;
+}
+
+.category-single-link {
+    color: #7E7E7E !important; /* لون النص أخف كما طلبت */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* أيقونة السهم الصغير داخل القائمة */
+.category-single-link i {
+    font-size: 10px;
+    margin-right: 8px;
+    color: #3BB77E;
+}
+
+.category-single-link:hover {
+    color: #3BB77E !important;
+    transform: translateX(5px);
+}
+
+/* زر View All البرتقالي */
+.btn-view-all-small {
+    background-color: #FDC040 !important;
+    color: #253D4E !important;
+    border: none;
+    padding: 7px 18px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    float: right; /* لمحاكاة موقع الزر في الصورة */
+    transition: 0.3s;
+}
+
+.btn-view-all-small:hover {
+    background-color: #253D4E !important;
+    color: #fff !important;
+}
+
+/* التجاوب للموبايل والحاسوب */
+@media (max-width: 991px) {
+    .category-box-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-main-title {
+        font-size: 1rem;
+    }
+}
+
+/* --- قسم كاردات المنتجات المطور --- */
+
+/* جعل الصف يحتوي على 5 كاردات في الشاشات الكبيرة */
+@media (min-width: 1200px) {
+    .custom-five-cols {
+        width: 20% !important;
+        flex: 0 0 20%;
+    }
+}
+
+.product-card-custom {
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card-custom:hover {
+    border-color: #BCE3C9;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.discount-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f1d42d;
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 15px 0 20px 0;
+    z-index: 2;
+}
+
+.product-img-box {
+    padding: 15px;
+    text-align: center;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img-box img {
+    max-height: 130px;
+    object-fit: contain;
+}
+
+.brand-label {
+    color: #adadad;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.product-main-name {
+    color: #3b5e77 !important; /* اللون الأزرق الداكن */
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    height: 40px;
+    overflow: hidden;
+}
+
+/* تنسيق النجوم */
+.rating-stars {
+    color: #FDC040; /* أصفر النجوم */
+    font-size: 11px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.rating-num {
+    color: #B6B6B6;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+/* قسم السعر */
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.new-price {
+    color: #253D4E !important; /* سعر أزرق داكن */
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.old-price-slashed {
+    color: #adadad;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+/* زر Add To Cart */
+.btn-add-to-cart-custom {
+    background-color: #f2f3f4 !important;
+    color: #253D4E !important;
+    border: 1px solid #e2e2e2 !important;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-add-to-cart-custom:hover {
+    background-color: #18084e !important;
+    color: #fff !important;
+    border-color: #3BB77E !important;
+}
+
+/* المواصفات التقنية بخط صغير خفيف */
+.tech-specs-list {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 12px;
+}
+
+.tech-specs-list li {
+    font-size: 10px;
+    color: #7E7E7E;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+/* --- Special Offer Styles --- */
+
+.special-offer-card {
+    border: 2px solid #FDC040; /* إطار برتقالي خفيف */
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* شريط Hurry Up المائل */
+.offer-header {
+    position: absolute;
+    top: 25px;
+    left: -35px;
+    background: #d73d3d;
+    color: white;
+    padding: 5px 40px;
+    transform: rotate(-45deg);
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.offer-img-box {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.offer-img-box img {
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.offer-title-main {
+    color: #253D4E;
+    font-weight: 800;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.offer-subtitle {
+    color: #7E7E7E;
+    font-size: 14px;
+}
+
+/* مربعات العداد الزمني */
+.time-box {
+    background: #FDC040;
+    color: #253D4E;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(253, 192, 64, 0.3);
+}
+
+/* تحسين كاردات المنتجات الجانبية لتتناسب مع القسم */
+.product-card-custom {
+    border: 1px solid #f0f0f0;
+    transition: 0.3s;
+}
+
+.product-card-custom:hover {
+    border-color: #FDC040;
+}
+
+/* جعل النصوص داكنة جداً */
+.product-main-name, .new-price {
+    color: #253D4E !important;
+}
+
+/* الألوان والخطوط */
+.color-dark-blue { color: #253D4E; }
+
+/* العداد الزمني (Countdown) */
+.time-unit-container { text-align: center; }
+.time-box {
+    background: #fdf2d0; 
+    color: #fdb813;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 18px;
+}
+.unit-label { font-size: 11px; }
+
+/* شريط التقدم (Stock Bar) */
+.custom-progress-bar {
+    height: 8px !important;
+    background-color: #f0f0f0 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+/* نظام توحيد الصور */
+.product-image-container {
+    width: 100%;
+    height: 150px; /* ارتفاع ثابت لجميع الصور الستة */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.uniform-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* يمنع تمدد الصورة ويحافظ على أبعادها */
+    transition: transform 0.3s ease;
+}
+
+.product-card-custom:hover .uniform-img {
+    transform: scale(1.05);
+}
+
+/* توحيد ارتفاع نصوص العناوين */
+.product-name-grid {
+    color: #253D4E;
+    height: 38px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* علامة الخصم البرتقالية */
+.discount-tag-badge {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background-color: #fd7e14;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 0 15px 15px 0;
+    font-size: 11px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* زر الإضافة للسلة */
+.btn-outline-add-cart {
+    border: 1px solid #e2e2e2;
+    background: #f8f9fa;
+    color: #253D4E;
+    font-size: 13px;
+    padding: 8px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-outline-add-cart:hover {
+    background: #3BB77E;
+    color: white !important;
+    border-color: #3BB77E;
+}
+/* تنسيقات النصوص */
+.brand-name {
+  color: #6c757d;
+  font-size: 14px;
+  display: block;
+}
+
+.product-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin: 5px 0;
+}
+
+.review-count {
+  font-size: 14px;
+  color: #6c757d;
+  margin-left: 5px;
+}
+
+/* تنسيق السعر */
+.current-price {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2b5797; /* لون أزرق مثل الصورة */
+}
+
+.old-price {
+  font-size: 18px;
+}
+
+/* شريط التقدم */
+.custom-progress {
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: visible;
+  position: relative;
+}
+
+/* النقطة الموجودة في نهاية شريط التقدم بالصورة */
+.progress-bar {
+  border-radius: 10px;
+  position: relative;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: -4px;
+  width: 16px;
+  height: 16px;
+  background: #d48d3b;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.stock-labels {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+/* قائمة المواصفات */
+.spec-list {
+  list-style: none;
+  padding: 0;
+  color: #7f8c8d;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.spec-list li::before {
+  content: "•";
+  color: #bdc3c7;
+  display: inline-block; 
+  width: 1em;
+  margin-left: 0;
+}
+/* تحسين شكل الأزرار */
+.btn-warning {
+    color: #fff !important;
+}
+
+/* لجعل الصور متجاوبة داخل الكروت */
+.promo-card-main img {
+    max-height: 300px;
+}
+
+/* تأثير بسيط عند المرور بالماوس */
+.promo-card-main, .col-md-7 div, .col-md-5 div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.promo-card-main:hover, .col-md-7 div:hover, .col-md-5 div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.trending-box {
+  background: #f4f6f9;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.filters button {
+  background: none;
+  border: none;
+  margin-right: 15px;
+  color: #777;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  color: #000;
+}
+
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+/* Trending Section */
+.trending-section {
+  background-color: #f4f7fb; /* نفس الخلفية بالصورة */
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.trending-title {
+  color: #1e4fd7; /* أزرق */
+  font-weight: 700;
+}
+
+.trending-sub {
+  color: #7a8aa0;
+  font-size: 14px;
+}
+
+/* Filters */
+.trending-filters {
+  display: flex;
+  gap: 15px;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  color: #7a8aa0;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  color: #1e4fd7;
+  border-bottom: 2px solid #1e4fd7;
+}
+
+/* Cards */
+.trending-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  height: 100%;
+}
+
+.trending-card img {
+  max-width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff9f43;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.product-name {
+  font-size: 14px;
+  color: #2c3e50;
+  min-height: 40px;
+}
+
+.stars {
+  color: #ffb400;
+  font-size: 13px;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.price .new {
+  color: #1e4fd7;
+  font-weight: bold;
+}
+
+.price .old {
+  color: #999;
+  text-decoration: line-through;
+}
+/* Trending filter buttons */
+.trending-filter-btn {
+  background: transparent;
+  border: none;
+  color: #7a8aa0;
+  font-weight: 500;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.trending-filter-btn.active {
+  color: #1e4fd7;
+  border-bottom: 2px solid #1e4fd7;
+}
+
+/* Add To Cart hover blue */
+.trending-cart-btn:hover {
+  background-color: #1e4fd7 !important;
+  color: #fff !important;
+  border-color: #1e4fd7 !important;
+}
+.top-selling-section {
+  background: #f6f9fc;
+  border-radius: 12px;
+}
+
+.carousel-btn {
+  background: #eef3ff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.side-banner-blue {
+  background: #6fb6e9;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.side-banner-blue h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.badge-blue {
+  background: rgba(255,255,255,0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+/* تنسيقات قسم Top Selling */
+.top-selling-section {
+    background-color: #fff;
+}
+
+/* الكارت الصغير للمنتج */
+.mini-product-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.mini-product-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.product-img-mini {
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.product-title-blue {
+    color: #2b5a91; /* لون أزرق مثل الصورة */
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.rating-stars-blue {
+    color: #f1c40f;
+    font-size: 12px;
+}
+
+.rating-count {
+    color: #999;
+    font-size: 11px;
+}
+
+.new-price-blue {
+    color: #2b5a91;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* البانر الجانبي الأزرق */
+.side-banner-blue {
+    background-color: #9dc6e7; /* لون الخلفية السماوي */
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px; /* لضمان الطول */
+}
+
+.badge-no {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #2b5a91;
+}
+
+.banner-main-title {
+    color: #1a3a5f;
+    font-weight: 800;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.banner-sub-title {
+    color: #4a6a8f;
+    font-size: 1.1rem;
+}
+
+.banner-watch-img {
+    max-width: 90%;
+    margin-bottom: -20px; /* لجعل الصورة تبرز قليلاً لأسفل */
+}
+
+/* أزرار السلايدر */
+.arrow-btn {
+    border: 1px solid #ddd;
+    background: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #666;
+    transition: 0.3s;
+}
+
+.arrow-btn:hover {
+    background: #2b5a91;
+    color: white;
+    border-color: #2b5a91;
+}
+/* تأثير الهوفر على الكرت الصغير */
+.mini-product-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    background-color: #fff;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* حركة ناعمة */
+    cursor: pointer;
+}
+
+.mini-product-card:hover {
+    transform: translateY(-5px); /* رفع الكرت للأعلى */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* إضافة ظل عميق */
+    border-color: #2b5a91; /* تغيير لون الإطار للأزرق */
+}
+
+/* حركة صورة المنتج عند الهوفر */
+.mini-product-card .product-img-mini img {
+    transition: transform 0.5s ease;
+}
+
+.mini-product-card:hover .product-img-mini img {
+    transform: scale(1.1); /* تكبير الصورة قليلاً */
+}
+
+/* تغيير لون العنوان عند الهوفر */
+.mini-product-card:hover .product-title-blue {
+    color: #d48d3b; /* تغيير اللون للبرتقالي أو لون الأكشن عند الهوفر */
+}
+/* تأثير الهوفر على البانر الجانبي */
+.side-banner-blue {
+    transition: all 0.5s ease;
+}
+
+.side-banner-blue:hover {
+    filter: brightness(1.05); /* تفتيح بسيط جداً للون */
+}
+
+/* حركة الساعة داخل البانر */
+.banner-watch-img {
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* حركة ارتدادية */
+}
+
+.side-banner-blue:hover .banner-watch-img {
+    transform: scale(1.08) rotate(-3deg); /* تكبير مع ميلان بسيط */
+}
+
+/* حركة النص داخل البانر */
+.side-banner-blue .banner-main-title {
+    transition: transform 0.4s ease;
+}
+
+.side-banner-blue:hover .banner-main-title {
+    transform: translateX(10px); /* تحريك النص لليمين قليلاً */
+}
+/* تنسيق العنوان: أزرق وعند الوقوف عليه أزرق فاتح */
+.news-title {
+  color: #002d5b; /* أزرق غامق */
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  line-height: 1.4;
+}
+
+.news-link:hover .news-title {
+  color: #00a2ff; /* أزرق فاتح جداً */
+}
+
+/* تنسيق أزرار السلايدر عند الوقوف عليها */
+.news-prev-btn:hover, .news-next-btn:hover {
+  background-color: #002d5b;
+  color: white;
+  border-color: #002d5b !important;
+}
+
+/* لضمان اختفاء أسهم Swiper الافتراضية إذا ظهرت */
+.swiper-button-next, .swiper-button-prev {
+  display: none !important;
+}
+/* تحسين شكل الصور وإضافة انحناء بسيط */
+.news-card img {
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+/* تأثير التكبير عند الوقوف على الكارد بالكامل */
+.news-card:hover img {
+  transform: scale(1.08);
+}
+
+/* المسافة بين التاريخ والعنوان */
+.news-title {
+  margin-top: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* لجعل العنوان يظهر في سطرين فقط مهما كان طوله */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* تنسيق النقطة الزرقاء لتكون بجانب التصنيف */
+.news-category-wrapper {
+  color: #007bff; /* لون التصنيف أزرق فاتح مثل الصورة */
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+/* --- تنسيق كروت الخدمات الصفراء --- */
+.service-card-yellow {
+  background-color: #fcebbd; /* اللون الأصفر كما في الصورة */
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* هوفر احترافي مرن */
+  cursor: pointer;
+  height: 100%;
+}
+
+.service-card-yellow:hover {
+  transform: translateY(-12px); /* حركة الارتفاع */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  background-color: #fbd67a; /* يغمق اللون قليلاً عند الهوفر */
+}
+
+.service-icon i {
+  font-size: 2.5rem;
+  color: #002d5b; /* لون الأيقونة أزرق */
+  margin-bottom: 15px;
+  display: block;
+}
+
+.service-title {
+  color: #002d5b; /* لون الخط أزرق */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.service-desc {
+  color: #555;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* --- تنسيق بنر الاشتراك الأزرق --- */
+.subscribe-banner-blue {
+  background-color: #0b2239; /* اللون الأزرق الداكن */
+  min-height: 300px;
+}
+
+.subscribe-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.subscribe-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.custom-input {
+  padding: 15px 25px;
+  border-radius: 30px 0 0 30px !important;
+  border: none;
+}
+
+.btn-orange-subscribe {
+  background-color: #e28214;
+  color: rgb(8, 8, 8);
+  padding: 0 35px;
+  border-radius: 0 30px 30px 0 !important;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-orange-subscribe:hover {
+  background-color: #b5742d;
+  color: white;
+}
+
+.banner-promo-img {
+  max-height: 250px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+/* الدوائر الزخرفية */
+.bg-circle {
+  position: absolute;
+  border: 2px solid rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+.circle-1 { width: 200px; height: 200px; top: -50px; right: -50px; }
+.circle-2 { width: 100px; height: 100px; bottom: 20px; left: 10%; }
+
+/* تقسيم الـ 5 أعمدة */
+@media (min-width: 1200px) {
+  .custom-five-cols-service {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+.btn-orange-final {
+  /* نستخدم !important للتأكد من تخطي أي إعدادات أخرى من بوتستراب */
+  background-color: #d48d3b !important; 
+  color: white !important;
+  padding: 40 40px !important;
+  border-radius: 0 30px 30px 0 !important;
+  font-weight: bold !important;
+  border: none !important;
+  height: 100%; /* ليأخذ نفس طول حقل الإدخال */
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-orange-final:hover {
+  background-color: #b5742d !important; /* لون أغمق قليلاً عند الوقوف عليه */
+  box-shadow: -5px 0 15px rgba(0,0,0,0.2); /* ظل بسيط لإعطاء تأثير احترافي */
+}
+
+/* تعديل بسيط لحقل الإدخال ليكون متناسقاً مع الزر */
+.custom-input {
+  border-radius: 30px 0 0 30px !important;
+  border: none !important;
+  padding-left: 25px !important;
+  box-shadow: none !important; /* إزالة الوهج الأزرق الافتراضي عند النقر */
+}
+/* تأثير انسيابي لدخول النص عند تحميل الصفحة */
+.subscribe-banner-blue h2 {
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.subscribe-banner-blue p {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.footer-heading {
+  color: #002d5b; /* أزرق غامق */
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.contact-info li {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.contact-info strong {
+  color: #002d5b;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  text-decoration: none !important;
+  color: #002d5b !important; /* أزرق غامق */
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links i {
+  font-size: 0.6rem;
+  color: #666; /* لون السهم الرمادي الصغير */
+}
+
+/* هوفر الكتابة أزرق فاتح */
+.footer-links a:hover {
+  color: #00bfff !important; /* أزرق فاتح */
+  padding-left: 5px; /* حركة بسيطة عند الهوفر */
+}
+
+/* هوفر أيقونات السوشيال ميديا */
+.social-icons a {
+  color: #002d5b;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00bfff; /* أزرق فاتح */
+  transform: translateY(-3px);
+}
+
+.app-download-buttons .btn {
+  border-radius: 8px;
+  background-color: #222;
+  border: none;
+}
+/* شعار الفوتر */
+.logo-icon-blue i {
+  color: #00bfff; /* لون الأيقونة أزرق فاتح */
+}
+
+/* روابط الفوتر الفرعية */
+.footer-sub-link {
+  text-decoration: none !important;
+  color: #002d5b !important; /* لون أزرق غامق */
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* إضافة الفاصل العمودي بين الروابط كما في الصورة */
+.footer-sub-link:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  color: #ddd;
+  pointer-events: none;
+}
+
+/* هوفر أزرق فاتح */
+.footer-sub-link:hover {
+  color: #00bfff !important; /* أزرق فاتح */
+}
+
+
+
+/* تنسيق صفوف التصنيفات */
+.category-row strong {
+  font-size: 0.9rem;
+  min-width: 80px;
+}
+
+.category-row {
+  line-height: 2; /* مسافة بين السطور لسهولة القراءة */
+}
+
+.footer-bottom {
+  background-color: #fff;
+}
+/* ===== Categories ===== */
+.category-box {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fff;
+  padding: 16px;
+}
+
+.category-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 8px;
+ color: #23043f;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.category-item i {
+  margin-right: 8px;
+  font-size: 12px;
+     color: #23043f;
+}
+
+.category-badge {
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 12px;
+}
+
+.category-item:hover {
+  color: #ff8c00;
+  transform: translateX(4px);
+}
+
+.category-item:hover .category-badge {
+  background: #ff8c00;
+  color: #fff;
+}
+
+/* ===== Banner ===== */
+.shop-banner-pro {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: 0.3s;
+    color: #480e7a;
+}
+
+.shop-banner-pro:hover {
+  transform: translateY(-4px);
+}
+
+.banner-text h3 {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.banner-sub {
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.banner-small {
+  font-size: 13px;
+  color: #777;
+}
+
+.shop-banner-pro img {
+  max-height: 140px;
+}
+
+/* ===== Filter Bar ===== */
+.filter-bar-pro {
+  margin-top: 20px;
+  padding: 12px 16px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.filter-btn,
+.filter-actions a {
+ color: #23043f;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.filter-btn i {
+  margin-right: 6px;
+}
+
+.filter-btn:hover,
+.filter-actions a:hover {
+  color: #ff8c00;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.filter-text {
+  font-size: 14px;
+  color: #23043f;
+}.shop-box {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: #fff;
+    
+}
+
+.shop-box h5 {
+  margin-bottom: 12px;
+  font-weight: 600;
+ color: #23043f;
+}
+
+.shop-box ul {
+  list-style: none;
+  padding: 0;
+  color: #23043f;
+}
+
+.shop-box li a {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+color: #23043f;
+  padding: 6px;
+  transition: 0.3s;
+}
+
+.shop-box li a:hover {
+  color: #23043f;
+  transform: translateX(4px);
+}
+
+.count {
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 12px;
+}
+
+/* Price */
+.price-slider input {
+  width: 100%;
+  accent-color: #ff8c00;
+}
+
+.price-text {
+color: #23043f;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* Checkbox */
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #23043f;
+}
+
+.check-row input {
+  display: none;
+  color: #23043f;
+}
+
+.check-ui {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #051732;
+}
+
+.check-row input:checked + .check-ui {
+  background: #031735;
+}
+
+.check-ui.orange {
+  border-color: #ff8c00;
+}
+
+.check-row input:checked + .check-ui.orange {
+  background: #ff8c00;
+}
+
+/* Colors */
+.color-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.color-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color-dot.active {
+  border-color: #ff8c00;
+}
+
+/* Banner */
+.shop-banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #23043f;
+  transition: 0.3s;
+}
+
+.shop-banner:hover {
+  transform: translateY(-4px);
+}
+.shop-banner {
+  height: 170px;
+}
+
+.shop-banner img {
+  max-height: 130px;
+}
+
+.shop-banner h2 {
+  font-size: 26px;
+}
+/* ===== LEFT EXTRA ===== */
+.best-seller .seller-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+ color: #23043f;
+  text-decoration: none;
+}
+
+.best-seller .seller-item:hover {
+  background: #fff3e0;
+  transform: translateX(5px);
+}
+
+.best-seller img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.best-seller .title {
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.best-seller .stars {
+  font-size: 13px;
+  color: #ff9800;
+}
+
+.best-seller .price .new {
+  color: #23043f;
+  font-weight: 700;
+}
+
+.best-seller .price .old {
+  text-decoration: line-through;
+  color: #aaa;
+  margin-left: 6px;
+}
+
+/* ===== TAGS ===== */
+.product-tags .tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product-tags a {
+  padding: 8px 14px;
+  border: 1px solid #052139;
+  border-radius: 10px;
+  font-size: 14px;
+ color: #23043f;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.product-tags a:hover {
+  background: #ff9800;
+  color: #fff;
+  border-color: #ff9800;
+  transform: translateY(-3px);
+}
+
+        .vendors-container * {
+          font-family: 'Inter', sans-serif;
+          color: #00215e; /* لون أزرق داكن لكل النصوص */
+          transition: all 0.3s ease;
+        }
+
+        /*Sidebar Styles*/
+        .sidebar-link {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          font-weight: 500;
+        }
+        .sidebar-link .arrow { margin-right: 10px; font-size: 10px; opacity: 0.5; }
+        .sidebar-link .label { flex: 1; }
+        .sidebar-link .num { opacity: 0.4; font-size: 13px; }
+
+        .sidebar-link:hover .label {
+          color: #ff6600 !important;
+          transform: translateX(5px);
+        }
+
+        /*Filter Bar Styles*/
+        .top-filter-bar {
+          background: #fff; padding: 15px 25px; border-radius: 12px;
+          display: flex; justify-content: space-between; align-items: center;
+          margin-bottom: 30px; border: 1px solid #e1e8ef;
+        }
+        .btn-filters {
+          background: #f0f5ff; border: 1px solid #00215e; 
+          padding: 8px 18px; border-radius: 8px; font-weight: 700; cursor: pointer;
+        }
+        .btn-filters:hover { background: #ff6600; color: #fff !important; border-color: #ff6600; }
+        .results-text { margin-left: 20px; font-size: 14px; opacity: 0.8; }
+
+        /*Card Styles - THE EXACT MATCH*/
+        .vendors-grid {
+          display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;
+        }
+        .exact-vendor-card {
+          background: #fff; border: 1px solid #e1e8ef; border-radius: 15px;
+          padding: 25px; position: relative; cursor: pointer;
+        }
+        .exact-vendor-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 35px rgba(0,33,94,0.1);
+          border-color: #ff6600;
+        }
+
+        .card-inner-top { display: flex; justify-content: space-between; align-items: flex-start; }
+        .logo-section { display: flex; gap: 12px; align-items: center; }
+        .v-logo {
+          width: 45px; height: 45px; background: #f8f9fa; border-radius: 8px;
+          display: flex; align-items: center; justify-content: center;
+          font-size: 24px; font-weight: 900; border: 1px solid #eee;
+        }
+        .v-name { margin: 0; font-size: 19px; font-weight: 800; }
+        .v-stars { color: #ffb400 !important; font-size: 12px; margin-top: 2px; }
+        .v-count { color: #00215e !important; opacity: 0.4; margin-left: 5px; }
+
+        .v-products-badge {
+          background: #eef4ff; color: #00215e !important;
+          padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700;
+        }
+
+        .v-member-tag {
+          font-size: 11px; opacity: 0.5; text-align: right; margin: 10px 0;
+        }
+
+        .v-contact-info { margin-top: 20px; }
+        .v-info-item { display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start; }
+        .v-info-item p { margin: 0; font-size: 13px; line-height: 1.4; font-weight: 500; opacity: 0.8; }
+        .v-icon { font-size: 16px; }
+
+        .v-next-btn {
+          position: absolute; bottom: 20px; right: 20px;
+          width: 35px; height: 35px; border-radius: 50%; border: 1px solid #e1e8ef;
+          background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center;
+        }
+        .exact-vendor-card:hover .v-next-btn {
+          background: #ff6600; color: #fff !important; border-color: #ff6600;
+        }
+        .make-money-title {
+        color: #00215e; /* أزرق داكن */
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .orange-line {
+        width: 80px;
+        height: 3px;
+        background-color: #ff6600; /* الخط البرتقالي تحت العنوان */
+        margin-bottom: 30px;
+      }
+
+      .make-money-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .make-money-item {
+        margin-bottom: 18px;
+      }
+
+      .make-money-link {
+        text-decoration: none;
+        color: #00215e; /* أزرق داكن */
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .blue-arrow {
+        color: #00215e; /* سهم أزرق داكن */
+        margin-right: 15px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      /* تأثير الهوفر - يتحول للبرتقالي ويتحرك قليلاً */
+      .make-money-link:hover {
+        color: #ff6600 !important;
+        transform: translateX(10px);
+      }
+
+      .make-money-link:hover .blue-arrow {
+        color: #ff6600 !important;
+      }
+
+      /* التعديل ليتناسب مع اللغة العربية (RTL) */
+      [dir="rtl"] .make-money-section {
+        text-align: right;
+      }
+      [dir="rtl"] .blue-arrow {
+        margin-right: 0;
+        margin-left: 15px;
+        transform: rotate(180deg);
+      }
+      [dir="rtl"] .make-money-link:hover {
+        transform: translateX(-10px);
+      }
+      /* تنسيق شريط الترقيم Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+
+.page-num, .page-arrow {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e1e8ef;
+  background-color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: #00215e; /* الأزرق الداكن */
+  transition: all 0.3s ease;
+}
+
+/* رقم 2 - اللون البرتقالي المطابق للصورة */
+.active-orange {
+  background-color: #ff6600 !important;
+  color: #fff !important;
+  border-color: #ff6600 !important;
+}
+
+/* رقم 3 - اللون الأزرق الفاتح المطابق للصورة */
+.active-blue {
+  background-color: #eef4ff !important;
+  color: #0062ff !important;
+  border-color: #0062ff !important;
+}
+
+/* تأثير الهوفر العام */
+.page-num:hover, .page-arrow:hover {
+  border-color: #ff6600;
+  color: #ff6600;
+  transform: translateY(-2px);
+}
+
+.page-arrow {
+  color: #adb5bd; /* لون الأسهم الرمادي */
+}
+.product-tags-container {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #e1e8ef;
+      margin-top: 30px;
+    }
+
+    .tags-title {
+      color: #00215e; /* أزرق داكن */
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .orange-divider {
+      width: 50px;
+      height: 3px;
+      background-color: #ff6600; /* الخط البرتقالي الاحترافي */
+      margin-bottom: 20px;
+    }
+
+    .tags-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag-item-link {
+      text-decoration: none;
+      color: #00215e; /* أزرق داكن */
+      background-color: #f8fafd;
+      border: 1px solid #e1e8ef;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    /* تأثير الهوفر: يتحول المربع للبرتقالي والنص للأبيض */
+    .tag-item-link:hover {
+      background-color: #ff6600 !important;
+      color: #fff !important;
+      border-color: #ff6600;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 12px rgba(255, 102, 0, 0.2);
+    }
+
+    /* لضمان التنسيق في اللغة العربية */
+    [dir="rtl"] .tag-item-link {
+      font-family: 'Cairo', sans-serif;
+    }
+  
+        /* الإعدادات العامة للخطوط والألوان */
+        .blog-page-container * {
+          font-family: 'Inter', sans-serif;
+          color: #00215e; /* أزرق داكن للنصوص */
+          transition: all 0.4s ease;
+        }
+
+        /* تنسيق شريط الفلاتر العلوي */
+        .blog-top-bar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 8%;
+          background: #fff;
+          border-bottom: 1px solid #ebf0f5;
+          margin-bottom: 40px;
+        }
+
+        .blog-main-title {
+          font-size: 24px;
+          font-weight: 800;
+          letter-spacing: 1px;
+        }
+
+        .right-side {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+        }
+
+        .results-count { font-size: 13px; opacity: 0.7; }
+        .filter-label { font-size: 13px; opacity: 0.6; }
+        .filter-dropdown {
+          background: none;
+          border: none;
+          font-weight: 700;
+          cursor: pointer;
+          font-size: 13px;
+        }
+
+        /* هوفر الشريط العلوي بالأزرق الفاتح */
+        .filter-dropdown:hover {
+          color: #00a8ff !important;
+        }
+
+        /* شبكة المقالات */
+        .blog-grid-container {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 30px;
+          padding: 0 8%;
+        }
+
+        /* كرت المقال */
+        .blog-card {
+          background: transparent;
+          cursor: pointer;
+        }
+
+        /* حركة الصورة عند وضع الماوس (Zoom + Overlay) */
+        .blog-image-wrapper {
+          position: relative;
+          overflow: hidden;
+          border-radius: 12px;
+          height: 200px;
+          margin-bottom: 15px;
+        }
+
+        .blog-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .blog-card:hover .blog-img {
+          transform: scale(1.1) rotate(1deg); /* تكبير ودوران بسيط */
+        }
+
+        .image-overlay {
+          position: absolute;
+          top: 0; left: 0; width: 100%; height: 100%;
+          background: rgba(0, 168, 255, 0.1); /* لمعة زرقاء خفيفة */
+          opacity: 0;
+        }
+
+        .blog-card:hover .image-overlay {
+          opacity: 1;
+        }
+
+        /* نصوص المقال */
+        .blog-category {
+          text-decoration: none;
+          font-size: 12px;
+          font-weight: 700;
+          color: #00a8ff; /* أزرق سماوي كما في الصورة */
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          margin-bottom: 10px;
+        }
+
+        .blog-category:hover {
+          color: #00215e !important; /* هوفر عكسي */
+        }
+
+        .blog-post-title {
+          text-decoration: none;
+        }
+
+        .blog-post-title h3 {
+          font-size: 17px;
+          line-height: 1.4;
+          margin: 0 0 15px 0;
+          font-weight: 700;
+        }
+
+        /* هوفر العناوين بالأزرق الفاتح */
+        .blog-post-title:hover h3 {
+          color: #00a8ff !important;
+        }
+
+        .blog-footer {
+          display: flex;
+          justify-content: space-between;
+          font-size: 11px;
+          opacity: 0.5;
+        }
+         
+        .blog-page-container * {
+          font-family: 'Inter', sans-serif;
+          transition: all 0.4s ease;
+        }
+
+        .blog-top-bar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 8%;
+          background: #fff;
+          border-bottom: 1px solid #ebf0f5;
+          margin-bottom: 40px;
+        }
+
+        .blog-main-title { font-size: 24px; font-weight: 800; color: #00215e; }
+
+        .blog-grid-container {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 30px;
+          padding: 0 8%;
+          margin-bottom: 60px; /* مسافة قبل القسم الفضي */
+        }
+
+        .blog-image-wrapper {
+          position: relative;
+          overflow: hidden;
+          border-radius: 12px;
+          height: 200px;
+          cursor: pointer;
+        }
+
+        .blog-img { width: 100%; height: 100%; object-fit: cover; }
+        .blog-card:hover .blog-img { transform: scale(1.1); }
+
+        .blog-post-title h3 {
+          font-size: 17px;
+          color: #00215e;
+          font-weight: 700;
+          height: 48px;
+          margin-top: 10px;
+        }
+
+        /* --- تنسيق القسم الفضي الجديد في الأسفل --- */
+        .silver-footer-section {
+          background-color: #e2e8f0; /* اللون الفضي */
+          margin: 40px 8% 0 8%;
+          padding: 30px;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 30px;
+        }
+
+        .promo-side-img {
+          flex: 1;
+          height: 180px;
+          border-radius: 15px;
+          overflow: hidden;
+        }
+
+        .promo-side-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .promo-center-content {
+          flex: 2;
+          text-align: center;
+        }
+
+        .promo-center-content h2 {
+          color: #00215e; /* أزرق داكن */
+          font-size: 28px;
+          font-weight: 800;
+          margin-bottom: 10px;
+        }
+
+        .promo-center-content p {
+          color: #00215e;
+          opacity: 0.8;
+          margin-bottom: 20px;
+        }
+
+        .promo-btn {
+          background: #00215e;
+          color: white;
+          border: none;
+          padding: 10px 25px;
+          border-radius: 8px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+
+        .promo-btn:hover {
+          background: #00a8ff;
+          transform: translateY(-3px);
+        }
+
+        @media (max-width: 1024px) {
+          .blog-grid-container { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+          .blog-grid-container { grid-template-columns: repeat(1, 1fr); }
+          .silver-footer-section { flex-direction: column; padding: 20px; }
+          .promo-side-img { width: 100%; height: 150px; }
+        }
+        .contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 8%;
+  gap: 50px;
+  background-color: #f9fafb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Contact Section Custom Style --- */
+
+/* الحاوية الرئيسية: تقسيم 50/50 */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0; /* التلاصق كما في الصورة */
+  padding: 80px 8%;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif; /* خط ناعم واحترافي */
+}
+
+/* قسم الفورم */
+.contact-form {
+  flex: 1;
+  padding-right: 60px;
+  min-width: 400px;
+}
+
+.contact-form h2 {
+  font-size: 38px;
+  font-weight: 600;
+  color: #00215e; /* أزرق داكن */
+  margin-bottom: 10px;
+}
+
+.contact-form p {
+  font-size: 16px;
+  color: #00215e; /* أزرق داكن */
+  margin-bottom: 40px;
+}
+
+/* تنسيق الحقول الاحترافي */
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 0; /* مسافات داخلية ناعمة */
+  margin-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid #e2e8f0; /* خط سفلي فقط كما في التصميم الحديث */
+  font-size: 15px;
+   color: #00215e; /* أزرق داكن */
+  background: transparent;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  border-bottom-color: #121d36; /* تغميق الخط عند الكتابة */
+}
+
+/* تقسيم الاسم الأول والأخير في سطر واحد */
+.contact-form .row {
+  display: flex;
+  gap: 30px;
+}
+
+/* زر الإرسال مثل الصورة */
+.contact-form button {
+  background-color: #3b5998; /* درجة الأزرق من الصورة */
+  color: white;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #122349;
+}
+
+/* قسم الخريطة */
+.contact-map {
+  flex: 1;
+  min-width: 400px;
+  height: 550px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.2); /* لمسة احترافية للخريطة */
+}
+
+/* --- Stores Section (مطابق تماماً للصورة الثانية) --- */
+.stores-section {
+  padding: 100px 8%;
+  background-color: #ffffff;
+}
+
+.stores-header {
+  margin-bottom: 60px;
+}
+
+.stores-header h2 {
+  font-size: 32px;
+  color: #00215e; /* أزرق داكن */
+  margin-bottom: 8px;
+}
+
+.stores-header p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.view-map-btn {
+  background-color: #3b5998;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ترتيب المدن */
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة مثل الصورة */
+  gap: 50px 30px;
+}
+
+.stores-grid h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00215e; /* أزرق داكن */
+  margin-bottom: 12px;
+}
+
+.stores-grid p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+/* الاستجابة للموبايل */
+@media (max-width: 992px) {
+  .stores-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-form { padding-right: 0; margin-bottom: 40px; }
+}
+
+@media (max-width: 600px) {
+  .stores-grid { grid-template-columns: 1fr; }
+  .contact-form .row { flex-direction: column; gap: 0; }
+}
+
+
+/* Container Wrapper */
+.cart-page-wrapper {
+  display: flex;
+  gap: 25px;
+  padding: 50px 7%;
+  background-color: #fff;
+  color: #002b5b; /* أزرق داكن */
+}
+
+.cart-container-main {
+  flex: 3;
+}
+
+/* Header Styling */
+.cart-table-header {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1.2fr 1fr 0.5fr;
+  background-color: #f0f4f8;
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Row Styling */
+.cart-product-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1.2fr 1fr 0.5fr;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.prod-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-img-preview {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.prod-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  line-height: 1.4;
+}
+
+.prod-stars {
+  color: #f6ad55;
+  font-size: 12px;
+}
+
+.rating-count { color: #a0aec0; margin-left: 5px; }
+
+/* Quantity Selector */
+.qty-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.qty-selector button {
+  padding: 5px 12px;
+  background: #f7fafc;
+  border: none;
+  cursor: pointer;
+  color: #002b5b;
+}
+
+.qty-selector span {
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Side Summary */
+.cart-summary-sidebar {
+  flex: 1;
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 12px;
+  height: fit-content;
+  border: 1px solid #e2e8f0;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.value-free { color: #38a169; font-weight: bold; }
+.value-location { color: #718096; }
+.divider { height: 1px; background: #e2e8f0; margin: 20px 0; }
+
+.total-final {
+  font-size: 22px;
+  font-weight: 800;
+  color: #002b5b;
+}
+
+/* Buttons */
+.btn-proceed-checkout {
+  display: block;
+  background: #002b5b;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 25px;
+  transition: 0.3s;
+}
+
+.btn-continue-shopping {
+  background: #3182ce;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-update-cart {
+  background: white;
+  color: #3182ce;
+  border: 1.5px solid #3182ce;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cart-actions-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.remove-item-btn {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.remove-item-btn:hover { color: #e53e3e; }
+.promo-hover img {
+  transition: transform 0.4s ease;
+}
+.promo-hover:hover img {
+  transform: scale(1.05);
+}
